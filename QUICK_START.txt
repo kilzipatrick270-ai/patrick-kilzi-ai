@@ -1,0 +1,98 @@
+═══════════════════════════════════════════════════════════════
+  🎯 INSIGHTER AI — QUICK START (30 SECONDES)
+═══════════════════════════════════════════════════════════════
+
+📦 FICHIER : insighter_ai_v1.0.zip (21 Ko)
+
+═══════════════════════════════════════════════════════════════
+  INSTALLATION
+═══════════════════════════════════════════════════════════════
+
+1️⃣  EXTRAIRE LE ZIP
+   Mac/Linux : unzip insighter_ai_v1.0.zip
+   Windows   : Click droit → Extraire
+
+2️⃣  OUVRIR UN TERMINAL DANS LE DOSSIER
+
+3️⃣  LANCER LE SERVEUR
+   Mac/Linux : chmod +x start.sh && ./start.sh
+   Windows   : Double-click start.bat
+
+4️⃣  OUVRIR NAVIGATEUR
+   http://localhost:5002
+
+5️⃣  AJOUTER TA CLÉ API
+   (Attention: ajoute-la avant de cliquer "Chercher")
+
+═══════════════════════════════════════════════════════════════
+  SI BESOIN DE LA CLE API
+═══════════════════════════════════════════════════════════════
+
+1. Va sur https://console.anthropic.com
+2. Crée une clé API (gratuite)
+3. Avant de lancer start.sh / start.bat, fais :
+
+   Mac/Linux : export ANTHROPIC_API_KEY='sk-ant-...'
+   Windows   : set ANTHROPIC_API_KEY=sk-ant-...
+
+═══════════════════════════════════════════════════════════════
+  COMMENT UTILISER
+═══════════════════════════════════════════════════════════════
+
+ONGLET 1 : "🔍 Recherche Données"
+  → Rentre un nom d'entreprise (TotalEnergies, Apple, etc.)
+  → Clique "Chercher les données"
+  → Attends 30 secondes
+  → Clique "Utiliser pour présentation"
+
+ONGLET 2 : "✨ Génération Présentation"
+  → Les chiffres sont déjà remplis
+  → Clique "Générer la présentation"
+  → Attends ~45 secondes
+  → Clique "Télécharger"
+
+═══════════════════════════════════════════════════════════════
+  CONTENU DU ZIP
+═══════════════════════════════════════════════════════════════
+
+insighter_ai/
+├── start.sh / start.bat       (Scripts de lancement)
+├── README.md                   (Documentation complète)
+├── app.py                      (Serveur Flask)
+├── generate_presentation.py    (Moteur PPTX)
+├── financial_data.py           (Recherche de données)
+├── templates/index.html        (Interface web)
+└── exports/                    (Dossier des PPTX générés)
+
+═══════════════════════════════════════════════════════════════
+  PRÉREQUIS
+═══════════════════════════════════════════════════════════════
+
+✅ Python 3.9+  (vérifier: python3 --version)
+✅ Internet (pour Claude API & recherche web)
+✅ Clé API Anthropic (gratuite)
+
+═══════════════════════════════════════════════════════════════
+  ÇA NE MARCHE PAS ?
+═══════════════════════════════════════════════════════════════
+
+❌ "Python not found"
+   → Installe Python : https://www.python.org
+
+❌ "Port 5002 already in use"
+   → Un autre service utilise ce port
+   → Modifie app.py, ligne finale : port=5003
+
+❌ "ANTHROPIC_API_KEY not found"
+   → Définis la clé avant de lancer
+   → export ANTHROPIC_API_KEY='...' (Mac/Linux)
+   → set ANTHROPIC_API_KEY=... (Windows)
+
+═══════════════════════════════════════════════════════════════
+  SUPPORT
+═══════════════════════════════════════════════════════════════
+
+Lire README.md pour la documentation complète
+Contact: contact@patrickkilzi.com
+
+═══════════════════════════════════════════════════════════════
